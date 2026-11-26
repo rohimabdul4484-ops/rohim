@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123c32">
+  <title>Coban Srengenge | Wisata Alam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="#beranda"><span class="brand-mark">✦</span> Coban Srengenge</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#tiket">Tiket</a>
+        <a href="#buku-tamu">Buku Tamu</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">JELAJAHI KEINDAHAN ALAM</p>
+        <h1>Pesona Alam<br><span>Coban Srengenge</span></h1>
+        <p class="hero-copy">Nikmati suasana sejuk, hijaunya pepohonan, dan keindahan air terjun yang menenangkan.</p>
+        <a class="primary-button" href="#galeri">Lihat Galeri <span>↓</span></a>
+      </div>
+      <div class="hero-note">KEINDAHAN ALAM JAWA TIMUR</div>
+    </section>
+
+    <section class="section about-section" id="tentang">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow dark">TENTANG WISATA</p>
+          <h2>Sejenak menjauh<br>dari ramainya kota.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Coban Srengenge menawarkan pemandangan air terjun dan lingkungan hijau yang cocok untuk menikmati suasana alam. Suara aliran air dan udara yang segar membuat kunjungan terasa lebih berkesan.</p>
+          <p class="small-note">Jaga kebersihan, patuhi petunjuk pengelola, dan selalu utamakan keselamatan saat berwisata.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeri">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">DOKUMENTASI</p>
+            <h2>Galeri Keindahan</h2>
+          </div>
+          <p class="section-description">Beberapa potret suasana dan pemandangan Coban Srengenge.</p>
+        </div>
+        <div class="gallery-grid" id="daftarGaleri"></div>
+      </div>
+    </section>
+
+    <section class="ticket-section" id="tiket">
+      <div class="container ticket-grid">
+        <div>
+          <p class="eyebrow">RENCANAKAN KUNJUNGAN</p>
+          <h2>Hitung perkiraan<br>biaya tiket.</h2>
+          <p class="ticket-copy">Masukkan jumlah pengunjung dan harga tiket per orang untuk menghitung total biaya.</p>
+        </div>
+        <div class="calculator">
+          <label for="jumlah">Jumlah pengunjung</label>
+          <input type="number" id="jumlah" min="1" max="100" value="1">
+          <label for="harga">Harga tiket per orang (Rp)</label>
+          <input type="number" id="harga" min="0" step="500" value="10000">
+          <button class="primary-button full-button" type="button" id="hitungButton">Hitung Total</button>
+          <div class="total-box">
+            <span>Total perkiraan</span>
+            <strong id="total">Rp10.000</strong>
+          </div>
+          <p class="small-note">Harga awal hanya contoh. Sesuaikan dengan tarif resmi yang berlaku.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guest-section" id="buku-tamu">
+      <div class="container guest-grid">
+        <div>
+          <p class="eyebrow dark">BUKU TAMU</p>
+          <h2>Ceritakan pengalamanmu.</h2>
+          <p class="section-description">Tinggalkan kesan dan saran setelah melihat informasi wisata ini.</p>
+        </div>
+        <form id="formTamu" class="guest-form">
+          <div class="form-row">
+            <div>
+              <label for="nama">Nama</label>
+              <input id="nama" name="nama" type="text" placeholder="Nama kamu" required maxlength="60">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="nama@email.com" required>
+            </div>
+          </div>
+          <label for="gender">Jenis kelamin</label>
+          <select id="gender" name="gender" required>
+            <option value="">Pilih</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+            <option value="Tidak ingin menyebutkan">Tidak ingin menyebutkan</option>
+          </select>
+          <label>Daya tarik favorit</label>
+          <div class="checks">
+            <label><input type="checkbox" name="daya" value="Air terjun"> Air terjun</label>
+            <label><input type="checkbox" name="daya" value="Pemandangan alam"> Pemandangan alam</label>
+            <label><input type="checkbox" name="daya" value="Suasana sejuk"> Suasana sejuk</label>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="asal">Asal daerah</label>
+              <input id="asal" name="asal" type="text" placeholder="Contoh: Malang" maxlength="80">
+            </div>
+            <div>
+              <label for="kunjungan">Frekuensi kunjungan</label>
+              <select id="kunjungan" name="kunjungan" required>
+                <option value="">Pilih</option>
+                <option>Pertama kali</option>
+                <option>Sudah 2–3 kali</option>
+                <option>Lebih dari 3 kali</option>
+              </select>
+            </div>
+          </div>
+          <label for="penilaian">Penilaian</label>
+          <select id="penilaian" name="penilaian" required>
+            <option value="">Pilih penilaian</option>
+            <option>Sangat baik</option>
+            <option>Baik</option>
+            <option>Cukup</option>
+            <option>Perlu ditingkatkan</option>
+          </select>
+          <label for="pesan">Kesan dan saran</label>
+          <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan kesan atau saranmu..." required maxlength="500"></textarea>
+          <div class="form-actions">
+            <button class="primary-button" type="submit">Kirim</button>
+            <button class="secondary-button" type="reset">Reset</button>
+          </div>
+          <p class="form-hint">Catatan: formulir demo ini hanya menampilkan hasil di halaman ini. Data tidak dikirim ke server.</p>
+          <div id="hasil" class="result-box" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#beranda">✦ Coban Srengenge</a>
+      <p>© <span id="tahun"></span> Website Wisata Coban Srengenge</p>
+      <a href="#beranda">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
